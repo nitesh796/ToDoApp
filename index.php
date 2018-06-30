@@ -11,10 +11,10 @@
   <body>
     <div class="page-container">
       <div class="page-content">
-        <div class="header-icon">
-          <i class="material-icons">done</i>
-        </div>
         <div class="login-form">
+          <div class="header-icon">
+            <i class="material-icons">done</i>
+          </div>
           <div class="msg">
               <span id="error-msg"></span>
           </div>
