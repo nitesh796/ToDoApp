@@ -19,9 +19,10 @@ $(document).ready(function() {
                   }
                   if(hasData===true){
                     console.log("Success");
+                    $("#error-msg").empty();
                   }
                   else{
-                    $("#error-msg").append("*"+message);
+                    $("#error-msg").html("*"+message);
                   }
                 }
             });
