@@ -33,10 +33,11 @@
             <div class="submit-btn">
               <button id="btn" type="submit" name="button">Sign In</button>
             </div>
+            <div class="signup-link">
+              <span>Don't have an account?</span>&nbsp&nbsp<a href="#">Sign Up</a>
+            </div>
           </form>
-          <div class="signup-link">
-            <span>Don't have an account?</span>&nbsp&nbsp<a href="#">Sign Up</a>
-          </div>
+
         </div><!-- end login-form -->
       </div><!-- end page-content -->
     </div><!-- end page-container -->
