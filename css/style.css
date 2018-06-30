@@ -15,7 +15,7 @@ body {
   background: url(../img/bgimg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  min-height: 100vh;
 }
 .header-icon {
   padding: 90px 0;
@@ -92,18 +92,13 @@ body {
 }
 
 /* Login Responsive */
-@media (max-width: 420px) {
-  .page-container {
-    max-width: 100%;
-  }
-}
 @media (min-width: 420px) {
   .page-content {
     background: transparent;
   }
-  body {
+  .page-container {
     background: url(../img/bgimg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
