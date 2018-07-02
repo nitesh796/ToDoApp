@@ -9,27 +9,19 @@ $(document).ready(function() {
       var password = $("#password").val();
       var birthday = $("#date").val();
 
-      if( user != "" && pass != "" ){
+      if( name != "" && email != "" && password!="" && birthday!=""){
             $.ajax({
                 url: apiUrl + 'signup.php',
                 type:'post',
                 data:{name:name, email:email, pass:password, bday:birthday},
                 dataType: 'json',
                 success:function(response){
-                  var hasData , message;
-                  for (var i = 0; i < response.length; i++) {
-                    hasData = response[i].success;
-                    message = response[i].data;
-                  }
-                  if(hasData===true){
-                    console.log("Success");
-                    $("#error-msg").empty();
-                  }
-                  else{
-                    $("#error-msg").html("*"+message);
-                  }
+                console.log(response);
                 }
             });
+        }
+        else {
+          $("#error-msg").html("You need to fill all the field");
         }
   });
 

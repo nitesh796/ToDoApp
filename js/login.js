@@ -1,5 +1,5 @@
-// var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
-var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
+var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
+// var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
 
 $(document).ready(function() {
   $("#btn").click(function(e){
@@ -27,6 +27,9 @@ $(document).ready(function() {
                   }
                 }
             });
+        }
+        else {
+          $("#error-msg").html("Please fill all the fields");
         }
   });
 

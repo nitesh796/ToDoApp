@@ -17,6 +17,9 @@
           </div>
           <form id="myForm">
             <p>Sign Up</p>
+            <div class="msg">
+                <span id="error-msg"></span>
+            </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
               <input id="name" type="text" class="form-control" name="Name" placeholder="Name">

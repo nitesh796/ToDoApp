@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 .header-icon {
-  padding: 90px 0;
+  padding: 70px 0;
   text-align: center;
 }
 .header-icon i {
@@ -29,10 +29,11 @@ body {
   border-radius: 100%;
   padding: 30px;
 }
-.user-form .msg{
+.user-form .msg {
+  height: 40px;
   text-align: center;
 }
-.user-form .msg #error-msg{
+.user-form .msg #error-msg {
   color: #ff3366;
   font-size: 15px;
 }
@@ -113,6 +114,7 @@ body {
 .user-form .user-bday {
 margin-bottom: 100px;
 }
+
 /* Login Responsive */
 @media (min-width: 420px) {
   .page-content,
