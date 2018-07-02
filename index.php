@@ -21,7 +21,7 @@
           <form id="myForm">
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
-              <input id="email" type="text" class="form-control" name="email" placeholder="Username">
+              <input id="email" type="email" class="form-control" name="email" placeholder="Username">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons md-dark"> lock </i></span>
