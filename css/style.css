@@ -1,0 +1,104 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../fonts/AvenirLTStd-Book.otf);
+  src: url(../fonts/AvenirLTStd-Medium.otf);
+  src: url(../fonts/AvenirLTStd-Roman.otf);
+}
+body {
+  font-family: "Avenir";
+}
+
+/* Login Page */
+.page-content {
+  max-width: 420px;
+  margin: 0 auto;
+  background: url(../img/bgimg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.header-icon {
+  padding: 90px 0;
+  text-align: center;
+}
+.header-icon i {
+  background: #fff;
+  color: #ff3366;
+  font-size: 150px;
+  font-weight: 600;
+  border-radius: 100%;
+  padding: 30px;
+}
+.login-form .msg{
+  text-align: center;
+}
+.login-form .msg #error-msg{
+  color: #ff3366;
+  font-size: 15px;
+}
+.login-form input,
+.login-form input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 5px 15px;
+}
+.login-form input::-webkit-input-placeholder {
+  color: #ffffff !important;
+  font-size: 15px;
+}
+.login-form .input-group i {
+  color: #c6c6c7;
+  font-size: 30px;
+  vertical-align: middle;
+}
+.login-form .input-group{
+  border-bottom: 1px solid #7f7e7e;
+  padding: 6px 25px;
+  margin-bottom: 20px;
+}
+.login-form .forgot-link {
+  text-align: right;
+}
+.login-form .forgot-link a{
+  text-decoration: none;
+  color: #c6c6c7;
+  cursor: pointer;
+  padding-right: 20px;
+}
+.login-form .submit-btn button {
+  display: block;
+  background: #ff3366;
+  color: #fff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 20px 0;
+  margin-top: 65px;
+}
+.login-form .submit-btn button:focus {
+  outline: none;
+}
+.login-form .signup-link{
+  text-align: center;
+  color: #c6c6c7;
+  padding: 20px 0;
+}
+.login-form .signup-link a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Login Responsive */
+@media (min-width: 420px) {
+  .page-content {
+    background: transparent;
+  }
+  .page-container {
+    background: url(../img/bgimg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
