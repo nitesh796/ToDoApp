@@ -9,41 +9,43 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <div class="page-container">
-      <div class="page-content">
+    <div class="page-container-signup">
+      <div class="page-content signup-bg">
         <div class="user-form">
-          <div class="header-icon">
-            <i class="material-icons">done</i>
-          </div>
-          <div class="msg">
-              <span id="error-msg"></span>
+          <div class="back-icon">
+              <a href="index.php"><i class="material-icons"> arrow_back </i></a>
           </div>
           <form id="myForm">
+            <p>Sign Up</p>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
-              <input id="email" type="text" class="form-control" name="email" placeholder="Username">
+              <input id="name" type="text" class="form-control" name="Name" placeholder="Name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="material-icons"> email</i></span>
+              <input id="email" type="text" class="form-control" name="email" placeholder="Email">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons md-dark"> lock </i></span>
               <input id="password" type="password" class="form-control" name="password" placeholder="Password">
             </div>
-            <div class="forgot-link">
-              <a href="#">Forgot Password</a>
+            <div class="input-group user-bday">
+              <span class="input-group-addon"><i class="material-icons">cake</i></span>
+              <input id="date" type="text" class="form-control" name="birthday" onfocus="(this.type='date')" placeholder="Birthday">
             </div>
             <div class="submit-btn">
-              <button id="btn" type="submit" name="button">Sign In</button>
+              <button id="btn" type="submit" name="button">Join</button>
             </div>
             <div class="signup-link">
-              <span>Don't have an account?</span>&nbsp&nbsp<a href="sign_up.php">Sign Up</a>
+              <span>Already have an account?</span>&nbsp&nbsp<a href="index.php">Sign In</a>
             </div>
           </form>
-
-        </div><!-- end login-form -->
+        </div><!-- end user-form -->
       </div><!-- end page-content -->
     </div><!-- end page-container -->
 
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/custom.js"></script>
+    <script src="./js/signup.js"></script>
   </body>
 </html>
