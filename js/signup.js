@@ -16,7 +16,14 @@ $(document).ready(function() {
                 data:{name:name, email:email, pass:password, bday:birthday},
                 dataType: 'json',
                 success:function(response){
-                console.log(response);
+                  var hasData , message;
+                  for (var i = 0; i < response.length; i++) {
+                    hasData = response[i].success;
+                    message = response[i].data;
+                  }
+                  if(hasData){
+                    $("#error-msg").html(message);
+                  }
                 }
             });
         }
