@@ -11,7 +11,7 @@
   <body>
     <div class="page-container">
       <div class="page-content">
-        <div class="login-form">
+        <div class="user-form">
           <div class="header-icon">
             <i class="material-icons">done</i>
           </div>
@@ -21,7 +21,7 @@
           <form id="myForm">
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
-              <input id="email" type="text" class="form-control" name="email" placeholder="Username">
+              <input id="email" type="email" class="form-control" name="email" placeholder="Username">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons md-dark"> lock </i></span>
@@ -34,7 +34,7 @@
               <button id="btn" type="submit" name="button">Sign In</button>
             </div>
             <div class="signup-link">
-              <span>Don't have an account?</span>&nbsp&nbsp<a href="#">Sign Up</a>
+              <span>Don't have an account?</span>&nbsp&nbsp<a href="sign_up.php">Sign Up</a>
             </div>
           </form>
 
@@ -44,6 +44,6 @@
 
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/custom.js"></script>
+    <script src="./js/login.js"></script>
   </body>
 </html>

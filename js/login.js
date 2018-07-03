@@ -28,6 +28,9 @@ $(document).ready(function() {
                 }
             });
         }
+        else {
+          $("#error-msg").html("Please fill all the fields");
+        }
   });
 
 });

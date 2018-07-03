@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 .header-icon {
-  padding: 90px 0;
+  padding: 70px 0;
   text-align: center;
 }
 .header-icon i {
@@ -29,45 +29,46 @@ body {
   border-radius: 100%;
   padding: 30px;
 }
-.login-form .msg{
+.user-form .msg {
+  height: 40px;
   text-align: center;
 }
-.login-form .msg #error-msg{
+.user-form .msg #error-msg {
   color: #ff3366;
   font-size: 15px;
 }
-.login-form input,
-.login-form input:focus {
+.user-form input,
+.user-form input:focus {
   border: none;
   outline: none;
   box-shadow: none;
   background: transparent;
   padding: 5px 15px;
 }
-.login-form input::-webkit-input-placeholder {
+.user-form input::-webkit-input-placeholder {
   color: #ffffff !important;
   font-size: 15px;
 }
-.login-form .input-group i {
+.user-form .input-group i {
   color: #c6c6c7;
   font-size: 30px;
   vertical-align: middle;
 }
-.login-form .input-group{
+.user-form .input-group{
   border-bottom: 1px solid #7f7e7e;
   padding: 6px 25px;
   margin-bottom: 20px;
 }
-.login-form .forgot-link {
+.user-form .forgot-link {
   text-align: right;
 }
-.login-form .forgot-link a{
+.user-form .forgot-link a{
   text-decoration: none;
   color: #c6c6c7;
   cursor: pointer;
   padding-right: 20px;
 }
-.login-form .submit-btn button {
+.user-form .submit-btn button {
   display: block;
   background: #ff3366;
   color: #fff;
@@ -77,23 +78,47 @@ body {
   padding: 20px 0;
   margin-top: 65px;
 }
-.login-form .submit-btn button:focus {
+.user-form .submit-btn button:focus {
   outline: none;
 }
-.login-form .signup-link{
+.user-form .signup-link {
   text-align: center;
   color: #c6c6c7;
   padding: 20px 0;
 }
-.login-form .signup-link a{
+.user-form .signup-link a {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
 }
+/* Sign Up Page */
+.signup-bg{
+  background: url(../img/signup_bg.png);
+  background-size: cover;
+}
+.user-form .back-icon a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.user-form .back-icon i {
+  color:#ffffff;
+  padding: 30px 10px;
+  font-size: 30px;
+}
+.user-form p{
+  color:#ffffff;
+  font-size: 38px;
+  padding: 6px 25px;
+  margin-bottom: 30px;
+}
+.user-form .user-bday {
+margin-bottom: 100px;
+}
 
 /* Login Responsive */
 @media (min-width: 420px) {
-  .page-content {
+  .page-content,
+  .signup-bg {
     background: transparent;
   }
   .page-container {
@@ -101,4 +126,9 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+  .page-container-signup {
+    background: url(../img/signup_bg.png);
+    background-size: 100% 100%;
+  }
+
 }
