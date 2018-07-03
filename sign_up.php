@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/material-icons.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,20 +13,20 @@
       <div class="page-content signup-bg">
         <div class="user-form">
           <div class="back-icon">
-              <a href="index.php"><i class="material-icons"> arrow_back </i></a>
+              <a href="#" class="back"><i class="material-icons"> arrow_back </i></a>
           </div>
-          <form id="myForm">
+          <form id="signup_form">
             <p>Sign Up</p>
             <div class="msg">
                 <span id="error-msg"></span>
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
-              <input id="name" type="text" class="form-control" name="Name" placeholder="Name">
+              <input id="name" type="text" class="form-control" name="name" placeholder="Name">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons"> email</i></span>
-              <input id="email" type="email" class="form-control" name="email" placeholder="Email" onkyeup = "return validate_email()">
+             <input id="email" type="text" class="form-control" name="email" placeholder="Email">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons md-dark"> lock </i></span>
@@ -34,7 +34,7 @@
             </div>
             <div class="input-group user-bday">
               <span class="input-group-addon"><i class="material-icons">cake</i></span>
-              <input id="date" type="text" class="form-control" name="birthday" onfocus="(this.type='date')" placeholder="Birthday">
+              <input id="date" type="text" class="form-control" name="birthday" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birthday">
             </div>
             <div class="submit-btn">
               <button id="btn" type="submit" name="button">Join</button>
@@ -48,7 +48,9 @@
     </div><!-- end page-container -->
 
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/signup.js"></script>
   </body>
 </html>
+<!-- onkeyup="return validateEmail(this.value)" -->
