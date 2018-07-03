@@ -6,119 +6,68 @@
   }
   @import '~pretty-checkbox/src/pretty-checkbox.scss';
 body{
-    font-family: Avenir;
-    background: linear-gradient(to bottom right,#3BB9FF , #E238EC); 
+    font-family: 'Avenir';
+    background: linear-gradient(to bottom right,#3BB9FF , #E238EC);
 }
 
-.list-container-full {
-    /* max-width: 420px; */
-    margin: 0 auto;
-}
-.list-container-mobile{
+.list-container-mobile {
     max-width: 420px;
     margin: 0 auto;
+    position: relative;
+    height: 100vh;
 }
 .header{
-    /* max-width: 425px; */
     background-color: #3BB9FF;
-    background-size: cover;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding: 25px 0 15px 0;
     text-align: center;
     position: fixed;
     top: 0;
     z-index: 999;
+    width: 420px;
 }
-.header a{
+.header a {
     color: white;
     font-size: 15px;
-    margin-left: 185px;
-    margin-right: 185px;
 }
-ul{
-    padding-left: 1px;
+.list {
+  margin-top: 60px;
 }
-p{
-    margin-bottom: 0;
-}
-li{
-    list-style-type: none;
-    padding-bottom: 17px;
-    padding-top: 17px;
+.list ul li {
+    padding: 20px 0 20px 30px;
     font-size: 20px;
     border-bottom: 1px solid white;
-    padding-left: 30px;
 }
-.list{
-    margin-top: 52px;
+.list ul li label {
+  margin-bottom: 0;
 }
-.list::-webkit-scrollbar {
-    width: 1em;
+.list ul li span {
+  color: #fff;
+  vertical-align: middle;
 }
-.list::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+.list ul li label:hover input ~ .box {
+  opacity: 0.2;
 }
-.list::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+.list [type="checkbox"]:checked+span:not(.lever):before{
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
-.box{
-    color: white;
+.footer {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #E238EC;
+  position: fixed;
+  bottom: 0;
+  width: 420px;
 }
-label:hover input ~ .box {
-    opacity: 0.2;
+.footer a i {
+  color: #fff;
+  font-size: 36px;
+  vertical-align: middle;
 }
-[type="checkbox"]:checked+span:not(.lever):before{
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    /* border-radius: 50%; */
-}
-.footer{
-    background-color: #E238EC;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    /* max-width: 425px; */
-    
-}
-.material-icons{
-    color: white;
-    font-size: 65px;
-    margin-top: 4px;
-    margin-left: 2.56em;
-    margin-right: 2.9em;
-}
-  @media (max-width:425px) 
-  {
-    .list-container-mobile {
-      background: transparent;
-    }
-    .header{
-        /* max-width: 425px; */
-        background-color: #3BB9FF;
-        background-size: cover;
-        padding-top: 25px;
-        padding-bottom: 10px;
-        top: 0;
-    } 
-    .header a{
-        margin-left: 185px !important;
-    }
-    .material-icons{
-        margin-left: 170px;
-        margin-right: 190px;
-    }  
-    .footer{
-        background-color: #E238EC;
-        bottom: 0;
-        text-align: center;
-    }
+
+@media (max-width: 425px) {
+  .header,
+  .footer {
+    width: 100%;
   }
-  @media(min-width:425px) and (max-width:768px){
-    .footer{
-        background-color: #E238EC;
-        bottom: 0;
-        text-align: center;
-        /* max-width: 425px; */
-    } 
-  }
+}
