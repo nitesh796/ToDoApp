@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/AvenirLTStd-Book.otf);
+    src: url(../fonts/AvenirLTStd-Medium.otf);
+    src: url(../fonts/AvenirLTStd-Roman.otf);
+  }
+  @import '~pretty-checkbox/src/pretty-checkbox.scss';
+body{
+    font-family: Avenir;
+    background: linear-gradient(to bottom right,#3BB9FF , #E238EC); 
+}
+
+.list-container-full {
+    /* max-width: 420px; */
+    margin: 0 auto;
+}
+.list-container-mobile{
+    max-width: 420px;
+    margin: 0 auto;
+}
+.header{
+    /* max-width: 425px; */
+    background-color: #3BB9FF;
+    background-size: cover;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.header a{
+    color: white;
+    font-size: 15px;
+    margin-left: 185px;
+    margin-right: 185px;
+}
+ul{
+    padding-left: 1px;
+}
+p{
+    margin-bottom: 0;
+}
+li{
+    list-style-type: none;
+    padding-bottom: 17px;
+    padding-top: 17px;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    padding-left: 30px;
+}
+.list{
+    margin-top: 52px;
+}
+.list::-webkit-scrollbar {
+    width: 1em;
+}
+.list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.box{
+    color: white;
+}
+label:hover input ~ .box {
+    opacity: 0.2;
+}
+[type="checkbox"]:checked+span:not(.lever):before{
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    /* border-radius: 50%; */
+}
+.footer{
+    background-color: #E238EC;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    /* max-width: 425px; */
+    
+}
+.material-icons{
+    color: white;
+    font-size: 65px;
+    margin-top: 4px;
+    margin-left: 2.56em;
+    margin-right: 2.9em;
+}
+  @media (max-width:425px) 
+  {
+    .list-container-mobile {
+      background: transparent;
+    }
+    .header{
+        /* max-width: 425px; */
+        background-color: #3BB9FF;
+        background-size: cover;
+        padding-top: 25px;
+        padding-bottom: 10px;
+        top: 0;
+    } 
+    .header a{
+        margin-left: 185px !important;
+    }
+    .material-icons{
+        margin-left: 170px;
+        margin-right: 190px;
+    }  
+    .footer{
+        background-color: #E238EC;
+        bottom: 0;
+        text-align: center;
+    }
+  }
+  @media(min-width:425px) and (max-width:768px){
+    .footer{
+        background-color: #E238EC;
+        bottom: 0;
+        text-align: center;
+        /* max-width: 425px; */
+    } 
+  }
