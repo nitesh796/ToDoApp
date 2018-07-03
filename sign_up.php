@@ -15,18 +15,18 @@
           <div class="back-icon">
               <a href="index.php"><i class="material-icons"> arrow_back </i></a>
           </div>
-          <form id="myForm">
+          <form id="signup_form">
             <p>Sign Up</p>
             <div class="msg">
                 <span id="error-msg"></span>
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons">person_outline</i></span>
-              <input id="name" type="text" class="form-control" name="Name" placeholder="Name">
+              <input id="name" type="text" class="form-control" name="name" placeholder="Name">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons"> email</i></span>
-              <input id="email" type="text" class="form-control" name="email" placeholder="Email" onkeyup="return validateEmail(this.value)">
+              <input id="email" type="text" class="form-control" name="email" placeholder="Email">
             </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="material-icons md-dark"> lock </i></span>
@@ -48,7 +48,9 @@
     </div><!-- end page-container -->
 
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/signup.js"></script>
   </body>
 </html>
+<!-- onkeyup="return validateEmail(this.value)" -->
