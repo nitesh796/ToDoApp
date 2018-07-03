@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/material-icons.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,7 +13,7 @@
       <div class="page-content signup-bg">
         <div class="user-form">
           <div class="back-icon">
-              <a href="index.php"><i class="material-icons"> arrow_back </i></a>
+              <a href="#" class="back"><i class="material-icons"> arrow_back </i></a>
           </div>
           <form id="signup_form">
             <p>Sign Up</p>
@@ -34,7 +34,7 @@
             </div>
             <div class="input-group user-bday">
               <span class="input-group-addon"><i class="material-icons">cake</i></span>
-              <input id="date" type="text" class="form-control" name="birthday" onfocus="(this.type='date')" placeholder="Birthday">
+              <input id="date" type="text" class="form-control" name="birthday" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birthday">
             </div>
             <div class="submit-btn">
               <button id="btn" type="submit" name="button">Join</button>
