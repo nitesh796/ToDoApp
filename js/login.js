@@ -1,5 +1,5 @@
-// var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
-var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
+var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
+// var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
 
 $(document).ready(function() {
   $("#btn").click(function(e){
@@ -13,13 +13,15 @@ $(document).ready(function() {
                 data:{username:user, password:pass},
                 dataType: 'json',
                 success:function(response){
-                  var hasData , message;
+                  var hasData , message , userid;
                   for (var i = 0; i < response.length; i++) {
                     hasData = response[i].success;
                     message = response[i].data;
+                    userid = response[i].id;
                   }
-                  if(hasData===true){
-                    console.log("Success");
+                  if(hasData){
+                    window.localStorage.setItem("id",userid);
+                    window.location.href="list.html";
                     $("#error-msg").empty();
                   }
                   else{
