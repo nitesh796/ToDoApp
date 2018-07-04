@@ -22,71 +22,133 @@
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">Paris</span>
+            <span class="box">Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="checkbox"/>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
+          </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">London</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">Barcelona</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">Maui</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">New York</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
-        </li>
-        <li>
-          <label>
-            <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">San Francisco</span>
-          </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox" />
-            <span class="box" style="font-size:22px;">Bura Bura</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">Zurich</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">India</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
         <li>
           <label>
             <input type="checkbox"/>
-            <span class="box" style="font-size:22px;">Iceland</span>
+            <span class="box" >Lorem ipsum dolor sit amet</span>
           </label>
+          <div class="right">
+            <a href="#" class="edit"><img src="img/icon.svg"></a>
+          </div>
         </li>
       </ul>
     </div>
 
     <div class="footer">
-      <a href="#"><i class="material-icons">add_circle_outline</i></a>
-    </div>
+        <a href="#" data-toggle="modal" data-target="#modalLoginForm"><i class="material-icons">add_circle_outline</i></a>      
+    </div> <!-- end of footer-->
 
   </div><!-- end list-container-mobile -->
+
+  <div class="modal" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add your Todo here</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Your work">
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fa fa-lock prefix grey-text"></i>
+                    <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Description">
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-default">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch Modal Login Form</a>
+</div>
 
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>

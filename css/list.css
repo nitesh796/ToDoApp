@@ -46,9 +46,20 @@ body{
 .list ul li label:hover input ~ .box {
   opacity: 0.2;
 }
+.list [type="checkbox"]:checked + span{
+  text-decoration: line-through;
+}
 .list [type="checkbox"]:checked+span:not(.lever):before{
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
+}
+.right {
+  float: right;
+  display: none;
+  margin-top: -10px;
+}
+.list ul li:hover .right {
+  display: inline;
 }
 .footer {
   padding: 15px 0;
@@ -63,10 +74,27 @@ body{
   font-size: 36px;
   vertical-align: middle;
 }
-
+#modalLoginForm{
+  background-color: transparent;
+}
+.modal-title {
+  font-size: 20px;
+}
+.modal-footer button{
+  background: #E238EC;
+}
 @media (max-width: 425px) {
   .header,
   .footer {
     width: 100%;
+  }
+  .list ul li{
+    font-size: 1px;
+  }
+  .modal-title {
+    font-size: 15px;
+  }
+  #defaultForm-email, #defaultForm-pass{
+    font-size: 15px;
   }
 }
