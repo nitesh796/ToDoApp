@@ -25,7 +25,7 @@ $(document).ready(function() {
                     $("#error-msg").empty();
                   }
                   else{
-                    $("#error-msg").html("*"+message);
+                    $("#error-msg").html(message);
                   }
                 }
             });
