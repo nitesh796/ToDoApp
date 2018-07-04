@@ -9,19 +9,17 @@
     $password = $_POST['password'];
     $data = "Authentication Failed.";
 
-    $login_query = mysqli_query($conn, "SELECT * FROM todo_users");
+    $login_query = mysqli_query($conn, " SELECT * FROM todo_users WHERE email = '" . $username . "' AND password = '" . $password . "' ");
+    $result = mysqli_fetch_assoc($login_query);
 
     if (mysqli_num_rows($login_query) > 0) {
-      while ($row = mysqli_fetch_assoc($login_query)) {
-        if ($username == $row['email'] && $password == $row['password']) {
-          $success = true;
-          $data = "Authorized";
-        }
-      }
+      $id = $result['id'];
+      $success = true;
+      $data = "Authorized";
     }
 
     if ($success) {
-      $response[] = array('success'=> $success, 'data'=> $data);
+      $response[] = array('success'=> $success, 'data'=> $data, 'id'=> $id);
     }else {
       $response[] = array('success'=> $success, 'data'=> $data);
     }
