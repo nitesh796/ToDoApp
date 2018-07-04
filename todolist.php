@@ -5,17 +5,14 @@
   $success = false;
 
   if ($_POST) {
-    $user_id = $_POST['id'];
-    $data = "Authentication Failed.";
 
+    $user_id = $_POST['uid'];
+    $data = "Authentication Failed.";
     $login_query = mysqli_query($conn, " SELECT * FROM todo_list WHERE user_id = '" . $user_id . "' ");
-    $result = mysqli_fetch_assoc($login_query);
-    mysqli_num_rows($login_query);
-    die();
 
     if (mysqli_num_rows($login_query) > 0) {
       $success = true;
-      while ($row = $result) {
+      while ($row = mysqli_fetch_assoc($login_query)) {
         $id = $row['id'];
         $title = $row['title'];
         $response[] = array('success'=> $success, 'id'=> $id, 'title'=> $title);
