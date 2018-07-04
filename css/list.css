@@ -39,33 +39,26 @@ body{
 }
 .list ul li label {
   margin-bottom: 0;
+  display: block;
 }
 .list ul li span {
   color: #fff;
   vertical-align: middle;
+  margin: auto 0;
 }
 .list ul li label:hover input ~ .box {
   opacity: 0.2;
 }
-<<<<<<< HEAD
+
 .list [type="checkbox"]:checked + span{
   text-decoration: line-through;
-=======
+}
 .list [type="checkbox"]+span:not(.lever) {
   font-size: 22px;
->>>>>>> 357032cc889bce4452166b99c2dc3047bcc43b22
 }
 .list [type="checkbox"]:checked+span:not(.lever):before{
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
-}
-.right {
-  float: right;
-  display: none;
-  margin-top: -10px;
-}
-.list ul li:hover .right {
-  display: inline;
 }
 .footer {
   padding: 15px 0;
@@ -75,13 +68,37 @@ body{
   bottom: 0;
   width: 420px;
 }
+.footer a {
+  outline: none;
+}
 .footer a i {
   color: #fff;
   font-size: 36px;
   vertical-align: middle;
 }
-#modalLoginForm{
-  background-color: transparent;
+.list ul li {
+  position: relative;
+}
+.delete-todo-item {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #E238EC;
+  padding: 5px;
+  border-radius: 100%;
+  display: none;
+}
+.delete-todo-item a i {
+  vertical-align: middle;
+  color: #fff;
+}
+.list ul li:hover .delete-todo-item {
+  display: block;
+}
+.modal {
+  background: none;
+  box-shadow: none;
 }
 .modal-title {
   font-size: 20px;
@@ -89,18 +106,13 @@ body{
 .modal-footer button{
   background: #E238EC;
 }
+
 @media (max-width: 425px) {
   .header,
   .footer {
     width: 100%;
   }
-  .list ul li{
-    font-size: 1px;
-  }
   .modal-title {
-    font-size: 15px;
-  }
-  #defaultForm-email, #defaultForm-pass{
     font-size: 15px;
   }
 }
