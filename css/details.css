@@ -53,10 +53,11 @@ p{
   bottom: 0;
   width: 420px;
   display: flex;
+  padding-left: 150px;
 }
 .savebtn{
     float: left;
-    width: 200px;
+    width: 150px;
 }
 button:hover{
     background: white;
@@ -73,7 +74,7 @@ button:hover{
 }
 .deletebtn{
     float: right;
-    width: 200px;
+    width: 150px;
 }
 @media (max-width: 425px) {
   .header,
