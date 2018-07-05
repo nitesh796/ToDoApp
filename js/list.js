@@ -1,5 +1,8 @@
 var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
+// var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
+
 $(document).ready(function() {
+    // Fetching the data
     var uid = window.localStorage.getItem("id");
     $.ajax({
       url: apiUrl+'todolist.php',
@@ -24,6 +27,7 @@ $(document).ready(function() {
       }
     });
 
+    // Adding The data
     $("#save_task").click(function(event) {
       event.preventDefault();
       var title = $("#defaultForm-email").val();
@@ -59,6 +63,7 @@ $(document).ready(function() {
       })
     });
 
+    // Deleteing todo items
     $(document).on('click', '.delete-todo-item', function () {
       var todo_id = $(this).parentsUntil('ul')[1].id;
       $.ajax({
@@ -74,7 +79,6 @@ $(document).ready(function() {
           if (hasData) {
               $("#"+todo_id).remove();
           }
-
         }
       });
     });
