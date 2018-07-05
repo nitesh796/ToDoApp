@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/AvenirLTStd-Book.otf);
+    src: url(../fonts/AvenirLTStd-Medium.otf);
+    src: url(../fonts/AvenirLTStd-Roman.otf);
+  }
+  @import '~pretty-checkbox/src/pretty-checkbox.scss';
+body{
+    font-family: 'Avenir';
+    background: linear-gradient(to bottom right,#3BB9FF , #E238EC);
+}
+
+.list-container-mobile {
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+}
+.header{
+    background-color: #3BB9FF;
+    padding: 25px 0 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 420px;
+}
+.header a {
+    color: white;
+    font-size: 15px;
+}
+.contents{
+    margin-top: 80px;
+    color: white;
+    margin-left:30px;
+}
+.contents-header{
+overflow: hidden;
+}
+hr{
+    color: white;
+    opacity: 1;
+    margin-right: 20px;
+}
+p{
+    margin-right: 10px;
+}
+.footer {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #E238EC;
+  position: fixed;
+  bottom: 0;
+  width: 420px;
+  display: flex;
+}
+.savebtn{
+    float: left;
+    width: 200px;
+}
+button:hover{
+    background: white;
+    color: #E238EC; 
+}
+.btns{
+    background: transparent;
+    border: none;
+    color: white;
+    border: 2px solid white;
+    padding-left: 6px;
+    font-size: 20px;
+    padding-right: 6px;
+}
+.deletebtn{
+    float: right;
+    width: 200px;
+}
+@media (max-width: 425px) {
+  .header,
+  .footer {
+    width: 100%;
+  }
+  .modal-title {
+    font-size: 15px;
+  }
+  p{
+ font-size: 15px;
+   }
+   h4{
+       font-size: 
+   }
+}
