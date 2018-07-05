@@ -109,7 +109,10 @@ body{
 #addTodoForm {
   text-align: center;
 }
-
+.msg-box {
+  height: 15px;
+  margin-bottom: 5px;
+}
 @media (max-width: 425px) {
   .header,
   .footer {

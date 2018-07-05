@@ -32,35 +32,40 @@ $(document).ready(function() {
       event.preventDefault();
       var title = $("#defaultForm-email").val();
       var description = $("#defaultForm-pass").val();
-      $.ajax({
-        url: apiUrl+'addtodo.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {uid: uid , title : title , description : description},
-        success:function(response){
-          $.each(response,function(i, data) {
-            var hasData = data.success;
-            var msg = data.data;
-            var listdata = "<li id='"+data.id+"'>" +
-              "<label>" +
-                "<input type='checkbox'/>" +
-                "<span class='box'>"+data.title+"</span>" +
-                "<div class='delete-todo-item'>" +
-                  "<a href='javascript:void(0)'>" +
-                    "<i class='material-icons'>delete</i>" +
-                  "</a>" +
-                "</div>" +
-              "</label>" +
-            "</li>"
-            $(".todos").append(listdata);
-            if (hasData) {
-              $("#success-msg").html(msg).show();
-              setTimeout(function() { $("#success-msg").hide(); }, 2000);
-            }
-          });
-           $("#addTodoForm")[0].reset();
-        }
-      })
+      if (title != "" && description != "") {
+        $.ajax({
+          url: apiUrl+'addtodo.php',
+          type: 'POST',
+          dataType: 'json',
+          data: {uid: uid , title : title , description : description},
+          success:function(response){
+            $.each(response,function(i, data) {
+              var hasData = data.success;
+              var msg = data.data;
+              var listdata = "<li id='"+data.id+"'>" +
+                "<label>" +
+                  "<input type='checkbox'/>" +
+                  "<span class='box'>"+data.title+"</span>" +
+                  "<div class='delete-todo-item'>" +
+                    "<a href='javascript:void(0)'>" +
+                      "<i class='material-icons'>delete</i>" +
+                    "</a>" +
+                  "</div>" +
+                "</label>" +
+              "</li>"
+              $(".todos").append(listdata);
+              if (hasData) {
+                $("#success-msg").html(msg).show();
+                setTimeout(function() { $("#success-msg").hide(); }, 2000);
+              }
+            });
+             $("#addTodoForm")[0].reset();
+          }
+        })
+      }
+      else {
+        $("#success-msg").html("Please Fill All The Fields").show();
+      }
     });
 
     // Deleteing todo items
