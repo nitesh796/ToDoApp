@@ -11,9 +11,16 @@ $(document).ready(function() {
       data: {uid: uid},
       success:function(response){
         $.each(response,function(i, data) {
+          var isChecked;
+          if(data.check=='1'){
+            isChecked = "checked";
+          }
+          else {
+            isChecked = "";
+          }
           var listdata = "<li id='"+data.id+"'>" +
             "<label>" +
-              "<input type='checkbox'/>" +
+              "<input type='checkbox' "+isChecked+">" +
               "<span class='box'></span>" +
               "<a href='javascript:void(0)' class='box-text'>"+data.title+"</a>" +
               "<div class='delete-todo-item'>" +
@@ -24,6 +31,12 @@ $(document).ready(function() {
             "</label>" +
           "</li>"
           $(".todos").append(listdata);
+          if($('input[type="checkbox"]').is(":checked")){
+            $(".box-text").css('text-decoration', 'line-through');
+          }
+          else {
+            $(".box-text").css('text-decoration', 'none');
+          }
         });
       }
     });
@@ -86,6 +99,26 @@ $(document).ready(function() {
           if (hasData) {
               $("#"+todo_id).remove();
           }
+        }
+      });
+    });
+
+    $(document).on('click', 'input[type="checkbox"]', function () {
+      var isChecked=false;
+      isChecked = $(this).is(":checked");
+      if(isChecked){
+        $(".box-text").css('text-decoration', 'line-through');
+      }
+      else {
+        $(".box-text").css('text-decoration', 'none');
+      }
+      var todo_id = $(this).parentsUntil('ul')[1].id;
+      $.ajax({
+        url: apiUrl+'checktodo.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {is_checked : isChecked , todo_id : todo_id},
+        success:function(response){
         }
       });
     });
