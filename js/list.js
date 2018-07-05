@@ -14,7 +14,8 @@ $(document).ready(function() {
           var listdata = "<li id='"+data.id+"'>" +
             "<label>" +
               "<input type='checkbox'/>" +
-              "<span class='box'>"+data.title+"</span>" +
+              "<span class='box'></span>" +
+              "<a href='javascript:void(0)' class='box-text'>"+data.title+"</a>" +
               "<div class='delete-todo-item'>" +
                 "<a href='javascript:void(0)'>" +
                   "<i class='material-icons'>delete</i>" +
@@ -45,7 +46,8 @@ $(document).ready(function() {
               var listdata = "<li id='"+data.id+"'>" +
                 "<label>" +
                   "<input type='checkbox'/>" +
-                  "<span class='box'>"+data.title+"</span>" +
+                  "<span class='box'></span>" +
+                  "<a href='javascript:void(0)' class='box-text'>"+data.title+"</a>" +
                   "<div class='delete-todo-item'>" +
                     "<a href='javascript:void(0)'>" +
                       "<i class='material-icons'>delete</i>" +
