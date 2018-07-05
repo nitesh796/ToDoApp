@@ -1,5 +1,6 @@
 var apiUrl = "http://192.168.1.121/nitesh/todoApp/";
 // var apiUrl = "http://excellencetechnologies.co.in/nitesh/todoApp/";
+
 $(document).ready(function(){
     $(".back").click(function(event) {
       event.preventDefault();
