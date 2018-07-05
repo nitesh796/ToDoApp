@@ -8,6 +8,8 @@
 
     $user_id = $_POST['uid'];
     $data = "Authentication Failed.";
+    $response = array();
+    
     $login_query = mysqli_query($conn, " SELECT * FROM todo_list WHERE user_id = '" . $user_id . "' ");
 
     if (mysqli_num_rows($login_query) > 0) {
