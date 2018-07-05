@@ -106,6 +106,9 @@ body{
 .modal-footer button{
   background: #E238EC;
 }
+#addTodoForm {
+  text-align: center;
+}
 
 @media (max-width: 425px) {
   .header,
