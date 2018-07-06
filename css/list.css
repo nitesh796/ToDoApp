@@ -9,7 +9,7 @@ body{
     font-family: 'Avenir';
 }
 .list-container-full {
-  background: linear-gradient(to bottom right,#3BB9FF , #E238EC);
+  background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
     background-repeat: no-repeat;
     min-height:100vh;
     overflow: hidden;
@@ -20,7 +20,7 @@ body{
     position: relative;
 }
 .header{
-    background-color: #3BB9FF;
+    background-color: #264d00;
     padding: 25px 0 15px 0;
     text-align: center;
     position: fixed;
@@ -40,7 +40,6 @@ body{
     padding: 20px 0 20px 30px;
     font-size: 20px;
     border-bottom: 1px solid white;
-    cursor: pointer;
 }
 .list ul li label {
   margin-bottom: 0;
@@ -50,22 +49,28 @@ body{
   margin: auto 0;
 }
 .list ul li label > a {
-  color: #fff;
-  font-size: 22px;
-  text-decoration: none;
-  vertical-align: middle;
+ color: #fff;
+ font-size: 22px;
+ text-decoration: none;
+ vertical-align: middle;
 }
 .list ul li label:hover input ~ .box {
   opacity: 0.2;
 }
-.list [type="checkbox"]:checked+span:not(.lever):before {
+.list [type="checkbox"]:checked + span{
+  text-decoration: line-through;
+}
+.list [type="checkbox"]+span:not(.lever) {
+  font-size: 22px;
+}
+.list [type="checkbox"]:checked+span:not(.lever):before{
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
 .footer {
   padding: 15px 0;
   text-align: center;
-  background-color: #E238EC;
+  background-color: #E0E0E0;
   position: fixed;
   bottom: 0;
   width: 420px;
@@ -74,7 +79,7 @@ body{
   outline: none;
 }
 .footer a i {
-  color: #fff;
+  color: #264d00;
   font-size: 36px;
   vertical-align: middle;
 }
@@ -86,7 +91,7 @@ body{
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background: #E238EC;
+  background: #264d00;
   padding: 5px;
   border-radius: 100%;
   display: none;
@@ -106,7 +111,17 @@ body{
   font-size: 20px;
 }
 .modal-footer button{
-  background: #E238EC;
+  background: #264d00;
+}
+.modal-footer button:hover{
+  background:#E0E0E0;
+  color: #264d00;
+  border: 2px solid #264d00;
+}
+button: : focus{
+  /* background:#E0E0E0; */
+  color: #264d00;
+  border: 2px solid #264d00;
 }
 #addTodoForm {
   text-align: center;

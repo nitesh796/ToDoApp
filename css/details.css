@@ -7,17 +7,21 @@
   @import '~pretty-checkbox/src/pretty-checkbox.scss';
 body{
     font-family: 'Avenir';
-    background: linear-gradient(to bottom right,#3BB9FF , #E238EC);
+    /* background: linear-gradient(to bottom right,#3BB9FF , #E238EC); */
 }
-
+.list-container-full {
+    background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
+      background-repeat: no-repeat;
+      min-height:100vh;
+      overflow: hidden;
+  }
 .list-container-mobile {
     max-width: 420px;
     margin: 0 auto;
     position: relative;
-    min-height: 100vh;
 }
 .header{
-    background-color: #3BB9FF;
+    background-color: #336600;
     padding: 25px 0 15px 0;
     text-align: center;
     position: fixed;
@@ -25,56 +29,88 @@ body{
     z-index: 999;
     width: 420px;
 }
+.header i{
+    float: left;
+    color: white;
+    margin-top: -4px;
+    margin-left: 15px;
+    font-size: 30px;
+}
 .header a {
     color: white;
     font-size: 15px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+.header a i {
+  position: absolute;
+  left: 0;
+}
+.header a span {
+  vertical-align: text-bottom;
 }
 .contents{
-    margin-top: 80px;
-    color: white;
-    margin-left:30px;
+    margin-top: 100px;
+    color: #fff;
+    padding: 0 20px;
 }
-.contents-header{
-overflow: hidden;
-}
-hr{
-    color: white;
-    opacity: 1;
-    margin-right: 20px;
-}
-p{
-    margin-right: 10px;
+.contents-header h4 {
+  margin-bottom: 0;
 }
 .footer {
   padding: 15px 0;
   text-align: center;
-  background-color: #E238EC;
+  background-color: #E0E0E0;
   position: fixed;
   bottom: 0;
   width: 420px;
   display: flex;
-  padding-left: 150px;
 }
-.savebtn{
+.deletebtn{
     float: left;
     width: 150px;
 }
+button {
+  cursor: pointer;
+}
 button:hover{
-    background: white;
-    color: #E238EC;
+    background: #264d00;
+    color: #D0D0D0 ;
 }
-.btns{
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.save_btns{
     background: transparent;
-    border: none;
-    color: white;
-    border: 2px solid white;
-    padding-left: 6px;
-    font-size: 20px;
-    padding-right: 6px;
+    border-radius:4px;
+    color: #264d00;
+    border: 2px solid #264d00;
+    font-size: 15px;
+    padding: 5px 35px;
 }
-.deletebtn{
+.control-group{
+    margin-top: 100px;
+    color: white;
+}
+.edit{
+    display: none;
+}
+.edit_btns{
+    background: transparent;
+    border-radius:4px;
+    color: #264d00;
+    border: 2px solid #264d00;
+    font-size: 15px;
+    padding: 5px 35px;
+}
+.savebtn{
     float: right;
     width: 150px;
+}
+.center{
+    margin: 0 auto;
 }
 @media (max-width: 425px) {
   .header,
