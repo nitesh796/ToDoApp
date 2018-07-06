@@ -7,7 +7,7 @@
   if ($_POST) {
 
     $user_id = $_POST['uid'];
-    $data = "Authentication Failed.";
+    $data = "Nothing to do.";
     $response = array();
 
     $login_query = mysqli_query($conn, " SELECT * FROM todo_list WHERE user_id = '" . $user_id . "' ");
@@ -20,6 +20,9 @@
         $check = $row['is_check'];
         $response[] = array('success'=> $success, 'id'=> $id, 'title'=> $title, 'check'=> $check);
       }
+
+    } else {
+      $response[] = array('success'=> $success, 'data'=> $data);
     }
 
   } else {

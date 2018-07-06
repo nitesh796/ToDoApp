@@ -12,14 +12,14 @@
     $data = "Add todo failed.";
     $response = array();
 
-    $insert_query = " INSERT INTO todo_list(title, description, user_id) VALUES('".$title."', '".$description."', '".$user_id."') ";
+    $insert_query = " INSERT INTO todo_list(title, description, user_id, is_check) VALUES('".$title."', '".$description."', '".$user_id."', '0') ";
 
     if(mysqli_query($conn, $insert_query)){
 
       $success = true;
       $data = "Todo add successfully.";
       $last_id = mysqli_insert_id($conn);
-      $login_query = mysqli_query($conn, " SELECT * FROM todo_list WHERE id = '" . $last_id . "' AND user_id = '".$user_id."' ");
+      $login_query = mysqli_query($conn, " SELECT * FROM todo_list WHERE id = '" . $last_id . "' AND user_id = '" . $user_id . "' ");
       $result = mysqli_fetch_assoc($login_query);
       $id = $result['id'];
       $title = $result['title'];
