@@ -16,11 +16,12 @@
 
       if (mysqli_num_rows($login_query) > 0) {
         $success = true;
+        $data = "Details found";
         while ($row = mysqli_fetch_assoc($login_query)) {
           $id = $row['id'];
           $title = $row['title'];
           $check = $row['is_check'];
-          $response[] = array('success'=> $success, 'id'=> $id, 'title'=> $title, 'check'=> $check);
+          $response[] = array('success'=> $success, 'data'=> $data, 'id'=> $id, 'title'=> $title, 'check'=> $check);
         }
 
       } else {
