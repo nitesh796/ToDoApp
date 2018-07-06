@@ -9,7 +9,7 @@ body{
     font-family: 'Avenir';
 }
 .list-container-full {
-  background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
+    background: #747374;
     background-repeat: no-repeat;
     min-height:100vh;
     overflow: hidden;
@@ -20,7 +20,7 @@ body{
     position: relative;
 }
 .header{
-    background-color: #264d00;
+    background-color: #ff3366;
     padding: 25px 0 15px 0;
     text-align: center;
     position: fixed;
@@ -31,6 +31,15 @@ body{
 .header a {
     color: white;
     font-size: 15px;
+    text-decoration: none;
+    display: block;
+}
+.header a span {
+  vertical-align: text-top; 
+}
+.header a #logout-btn {
+  position: absolute;
+  right: 15px;
 }
 .list {
   margin-top: 62px;
@@ -39,7 +48,7 @@ body{
 .list ul li {
     padding: 20px 0 20px 30px;
     font-size: 20px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ff3366;
 }
 .list ul li label {
   margin-bottom: 0;
@@ -79,7 +88,7 @@ body{
   outline: none;
 }
 .footer a i {
-  color: #264d00;
+  color: #ff3366;
   font-size: 36px;
   vertical-align: middle;
 }
@@ -91,7 +100,7 @@ body{
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background: #264d00;
+  background: #ff3366;
   padding: 5px;
   border-radius: 100%;
   display: none;
@@ -111,12 +120,12 @@ body{
   font-size: 20px;
 }
 .modal-footer button{
-  background: #264d00;
+  background: #ff3366;
 }
 .modal-footer button:hover{
-  background:#E0E0E0;
-  color: #264d00;
-  border: 2px solid #264d00;
+  background:#fff;
+  color: #ff3366;
+  border: 2px solid #ff3366;
 }
 button: : focus{
   /* background:#E0E0E0; */

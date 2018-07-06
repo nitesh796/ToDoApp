@@ -7,10 +7,9 @@
   @import '~pretty-checkbox/src/pretty-checkbox.scss';
 body{
     font-family: 'Avenir';
-    /* background: linear-gradient(to bottom right,#3BB9FF , #E238EC); */
 }
 .list-container-full {
-    background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
+    background: #747374;
       background-repeat: no-repeat;
       min-height:100vh;
       overflow: hidden;
@@ -21,7 +20,7 @@ body{
     position: relative;
 }
 .header{
-    background-color: #336600;
+    background-color: #ff3366;
     padding: 25px 0 15px 0;
     text-align: center;
     position: fixed;
@@ -43,9 +42,15 @@ body{
     display: block;
     text-decoration: none;
 }
-.header a i {
+.header a #back-btn,
+.header a #logout-btn {
   position: absolute;
+}
+.header a #back-btn {
   left: 0;
+}
+.header a #logout-btn {
+  right: 15px;
 }
 .header a span {
   vertical-align: text-bottom;
@@ -75,18 +80,18 @@ button {
   cursor: pointer;
 }
 button:hover{
-    background: #264d00;
+    background: #ff3366;
     color: #D0D0D0 ;
 }
 button:focus {
   outline: none;
   box-shadow: none;
 }
-.save_btns{
+.save_btns , .edit_btns{
     background: transparent;
     border-radius:4px;
-    color: #264d00;
-    border: 2px solid #264d00;
+    color: #ff3366;
+    border: 2px solid #ff3366;
     font-size: 15px;
     padding: 5px 35px;
 }
@@ -96,14 +101,6 @@ button:focus {
 }
 .edit{
     display: none;
-}
-.edit_btns{
-    background: transparent;
-    border-radius:4px;
-    color: #264d00;
-    border: 2px solid #264d00;
-    font-size: 15px;
-    padding: 5px 35px;
 }
 .savebtn{
     float: right;
