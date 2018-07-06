@@ -11,32 +11,44 @@ $(document).ready(function() {
       data: {uid: uid},
       success:function(response){
         $.each(response,function(i, data) {
-          var isChecked;
-          if(data.check=='1'){
-            isChecked = "checked";
+          var isChecked , done , success;
+          success = data.success;
+          if (success) {
+            if(data.check=='1'){
+              isChecked = "checked";
+              done = true;
+            }
+            else {
+              isChecked = "";
+              done = false;
+            }
+            var listdata = "<li id='"+data.id+"'>" +
+              "<label>" +
+                "<input type='checkbox' "+isChecked+">" +
+                "<span class='box'></span>" +
+                "<a href='javascript:void(0)' class='box-text'>"+data.title+"</a>" +
+                "<div class='delete-todo-item'>" +
+                  "<a href='javascript:void(0)'>" +
+                    "<i class='material-icons'>delete</i>" +
+                  "</a>" +
+                "</div>" +
+              "</label>" +
+            "</li>"
+            $(".todos").append(listdata);
+            if(done){
+              $("#"+data.id+" a.box-text").css('text-decoration', 'line-through');
+            }
+            else {
+              $("#"+data.id+" a.box-text").css('text-decoration', 'none');
+            }
           }
           else {
-            isChecked = "";
+                var listdata = "<li class='ntdo' style='border:none; color: #fff; text-align: center; font-size: 34px; padding-left:0;'>"
+                +data.data+
+            "</li>"
+            $(".todos").html(listdata);
           }
-          var listdata = "<li id='"+data.id+"'>" +
-            "<label>" +
-              "<input type='checkbox' "+isChecked+">" +
-              "<span class='box'></span>" +
-              "<a href='javascript:void(0)' class='box-text'>"+data.title+"</a>" +
-              "<div class='delete-todo-item'>" +
-                "<a href='javascript:void(0)'>" +
-                  "<i class='material-icons'>delete</i>" +
-                "</a>" +
-              "</div>" +
-            "</label>" +
-          "</li>"
-          $(".todos").append(listdata);
-          if($('input[type="checkbox"]').is(":checked")){
-            $(".box-text").css('text-decoration', 'line-through');
-          }
-          else {
-            $(".box-text").css('text-decoration', 'none');
-          }
+
         });
       }
     });
@@ -67,7 +79,8 @@ $(document).ready(function() {
                     "</a>" +
                   "</div>" +
                 "</label>" +
-              "</li>"
+              "</li>";
+              $(".ntdo").remove();
               $(".todos").append(listdata);
               if (hasData) {
                 $("#success-msg").html(msg).show();
@@ -98,19 +111,26 @@ $(document).ready(function() {
           }
           if (hasData) {
               $("#"+todo_id).remove();
+              if (!$("ul").has("li").length) {
+                    var listdata = "<li class='ntdo' style='border:none; color: #fff; text-align: center; font-size: 34px; padding-left:0;'>"
+                    +"Nothing to do."+"</li>"
+                $(".todos").html(listdata);
+              }
           }
         }
       });
     });
 
+// Check Todo
     $(document).on('click', 'input[type="checkbox"]', function () {
+      var id = $(this).parentsUntil('ul')[1].id;
       var isChecked=false;
       isChecked = $(this).is(":checked");
       if(isChecked){
-        $(".box-text").css('text-decoration', 'line-through');
+        $("#"+id+" a.box-text").css('text-decoration', 'line-through');
       }
       else {
-        $(".box-text").css('text-decoration', 'none');
+        $("#"+id+" a.box-text").css('text-decoration', 'none');
       }
       var todo_id = $(this).parentsUntil('ul')[1].id;
       $.ajax({
@@ -121,5 +141,12 @@ $(document).ready(function() {
         success:function(response){
         }
       });
+    });
+
+    // Details Of todos
+    $(document).on('click', '.list ul li label > a', function () {
+      var id = $(this).parentsUntil('ul')[1].id;
+      window.localStorage.setItem("todo_id" , id );
+      window.location.href = "todo_details.html";
     });
 });
