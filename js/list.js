@@ -5,7 +5,7 @@ $(document).ready(function() {
     // Fetching the data
     var uid = window.localStorage.getItem("id");
     $.ajax({
-      url: apiUrl+'todolist.php',
+      url: apiUrl+'todo_list.php',
       type: 'POST',
       dataType: 'json',
       data: {uid: uid},
@@ -60,7 +60,7 @@ $(document).ready(function() {
       var description = $("#defaultForm-pass").val();
       if (title != "" && description != "") {
         $.ajax({
-          url: apiUrl+'addtodo.php',
+          url: apiUrl+'add_todo.php',
           type: 'POST',
           dataType: 'json',
           data: {uid: uid , title : title , description : description},
@@ -100,7 +100,7 @@ $(document).ready(function() {
     $(document).on('click', '.delete-todo-item', function () {
       var todo_id = $(this).parentsUntil('ul')[1].id;
       $.ajax({
-        url: apiUrl+'deletetodo.php',
+        url: apiUrl+'delete_todo.php',
         type: 'POST',
         dataType: 'json',
         data: {todo_id: todo_id},
@@ -134,7 +134,7 @@ $(document).ready(function() {
       }
       var todo_id = $(this).parentsUntil('ul')[1].id;
       $.ajax({
-        url: apiUrl+'checktodo.php',
+        url: apiUrl+'check_todo.php',
         type: 'POST',
         dataType: 'json',
         data: {is_checked : isChecked , todo_id : todo_id},
@@ -147,6 +147,6 @@ $(document).ready(function() {
     $(document).on('click', '.list ul li label > a', function () {
       var id = $(this).parentsUntil('ul')[1].id;
       window.localStorage.setItem("todo_id" , id );
-      window.location.href = "todo_details.html";
+      window.location.href = "details.php";
     });
 });

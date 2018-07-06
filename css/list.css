@@ -6,12 +6,12 @@
   }
   @import '~pretty-checkbox/src/pretty-checkbox.scss';
 body{
-    font-family: 'Avenir';    
+    font-family: 'Avenir';
 }
 .list-container-full {
   background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
     background-repeat: no-repeat;
-    min-height:100vh;  
+    min-height:100vh;
     overflow: hidden;
 }
 .list-container-mobile {
@@ -43,12 +43,16 @@ body{
 }
 .list ul li label {
   margin-bottom: 0;
-  display: block;
 }
 .list ul li span {
-  color: #fff;
   vertical-align: middle;
   margin: auto 0;
+}
+.list ul li label > a {
+ color: #fff;
+ font-size: 22px;
+ text-decoration: none;
+ vertical-align: middle;
 }
 .list ul li label:hover input ~ .box {
   opacity: 0.2;

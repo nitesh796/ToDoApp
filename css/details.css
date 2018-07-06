@@ -12,7 +12,7 @@ body{
 .list-container-full {
     background: linear-gradient(to bottom right,#D0D0D0 , #264d00);
       background-repeat: no-repeat;
-      min-height:100vh;  
+      min-height:100vh;
       overflow: hidden;
   }
 .list-container-mobile {
@@ -39,23 +39,24 @@ body{
 .header a {
     color: white;
     font-size: 15px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+.header a i {
+  position: absolute;
+  left: 0;
+}
+.header a span {
+  vertical-align: text-bottom;
 }
 .contents{
-    margin-top: 80px;
-    color: white;
-    margin-left:30px;
-    margin-right: 30px;
+    margin-top: 100px;
+    color: #fff;
+    padding: 0 20px;
 }
-.contents-header{
-overflow: hidden;
-}
-hr{
-    color: white;
-    opacity: 1;
-    margin-right: 20px;
-}
-p{
-    margin-right: 10px;
+.contents-header h4 {
+  margin-bottom: 0;
 }
 .footer {
   padding: 15px 0;
@@ -69,11 +70,17 @@ p{
 .deletebtn{
     float: left;
     width: 150px;
-    /* padding: 5px; */
+}
+button {
+  cursor: pointer;
 }
 button:hover{
     background: #264d00;
-    color: #D0D0D0 ; 
+    color: #D0D0D0 ;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 .save_btns{
     background: transparent;
@@ -81,10 +88,7 @@ button:hover{
     color: #264d00;
     border: 2px solid #264d00;
     font-size: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 5px 35px;
 }
 .control-group{
     margin-top: 100px;
@@ -99,10 +103,7 @@ button:hover{
     color: #264d00;
     border: 2px solid #264d00;
     font-size: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 5px 35px;
 }
 .savebtn{
     float: right;
@@ -123,6 +124,6 @@ button:hover{
  font-size: 15px;
    }
    h4{
-       font-size: 
+       font-size:
    }
 }

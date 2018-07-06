@@ -37,23 +37,23 @@ $(document).ready(function(){
                 var email = $("#email").val();
                 var password = $("#password").val();
                 var birthday = $("#date").val();
-                    $.ajax({
-                     url: apiUrl + 'signup.php',
-                     type:'post',
-                     data:{name:name, email:email, pass:password, bday:birthday},
-                     dataType: 'json',
-                     success:function(response){
-                       var hasData , message;
-                       for (var i = 0; i < response.length; i++) {
-                         hasData = response[i].success;
-                         message = response[i].data;
-                       }
-                       if (hasData) {
-                         $("#signup_form")[0].reset();
-                       }
-                         $("#error-msg").html(message);
-                     }
-                    });
+                $.ajax({
+                 url: apiUrl + 'signup.php',
+                 type:'post',
+                 data:{name:name, email:email, pass:password, bday:birthday},
+                 dataType: 'json',
+                 success:function(response){
+                   var hasData , message;
+                   for (var i = 0; i < response.length; i++) {
+                     hasData = response[i].success;
+                     message = response[i].data;
+                   }
+                   if (hasData) {
+                     $("#signup_form")[0].reset();
+                   }
+                     $("#error-msg").html(message);
+                 }
+                });
         }
     });
 
