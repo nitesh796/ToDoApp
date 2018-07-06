@@ -43,10 +43,16 @@ $(document).ready(function() {
             }
           }
           else {
-                var listdata = "<li class='ntdo' style='border:none; color: #fff; text-align: center; font-size: 34px; padding-left:0;'>"
-                +data.data+
-            "</li>"
-            $(".todos").html(listdata);
+            if (data.data.toLowerCase() === "id not found") {
+              window.location.href = "index.html";
+            }
+            else {
+              var listdata = "<li class='ntdo' style='border:none; color: #fff; text-align: center; font-size: 34px; padding-left:0;'>"
+              +data.data+
+              "</li>"
+              $(".todos").html(listdata);
+            }
+
           }
 
         });
@@ -149,4 +155,11 @@ $(document).ready(function() {
       window.localStorage.setItem("todo_id" , id );
       window.location.href = "details.html";
     });
+
+    $("#logout-btn").click(function(event) {
+      event.preventDefault();
+      window.localStorage.clear();
+      window.location.href = "index.html";
+    });
+
 });
