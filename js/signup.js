@@ -50,6 +50,7 @@ $(document).ready(function(){
                    }
                    if (hasData) {
                      $("#signup_form")[0].reset();
+                     window.location.href = "index.html";
                    }
                      $("#error-msg").html(message);
                  }

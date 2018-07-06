@@ -147,6 +147,6 @@ $(document).ready(function() {
     $(document).on('click', '.list ul li label > a', function () {
       var id = $(this).parentsUntil('ul')[1].id;
       window.localStorage.setItem("todo_id" , id );
-      window.location.href = "details.php";
+      window.location.href = "details.html";
     });
 });
